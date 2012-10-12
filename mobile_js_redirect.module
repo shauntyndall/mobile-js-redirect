@@ -5,5 +5,7 @@
  */
 
 function mobile_js_redirect_init() {
-
+  if (user_is_anonymous()) {
+    drupal_add_js('misc/jquery.cookie.js', 'file');
+  }
 }
