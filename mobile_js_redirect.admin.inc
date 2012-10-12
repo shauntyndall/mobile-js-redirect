@@ -19,6 +19,7 @@ function mobile_js_redirect_admin_settings() {
     '#title' => 'Mobile Domain',
     '#description' => t('Enter the domain a mobile user should be redirected to (ex: m.example.com), without the http:// prefix.'),
     '#default_value' => variable_get('mobile_js_domain_redirect', ''),
+    '#required' => TRUE,
   );
 
   return system_settings_form($form);
