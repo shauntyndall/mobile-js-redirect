@@ -1,0 +1,3 @@
+name = Mobile Redirect (JS)
+description = Redirect mobile users to another domain / mobile version of your website.
+core = 7.x
