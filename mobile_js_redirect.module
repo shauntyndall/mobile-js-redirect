@@ -9,11 +9,11 @@ function mobile_js_redirect_init() {
     drupal_add_js('misc/jquery.cookie.js', 'file');
   }
 
-  $enabled = variable_get('mobile_js_redirect_enable', 1);
-
-  if ($enabled) {
+  if (variable_get('mobile_js_redirect_enable', 0)) {
     // add data to Drupal.settings
-    drupal_add_js();
+    global $cookie_domain;
+    drupal_add_js(array('mobile_js_redirect' => array('base_domain' => $cookie_domain, 'mobile_domain' => variable_get('mobile_js_domain_redirect', ''), 'desktop_domain' => variable_get('mobile_js_desktop_domain', ''))), 'setting');
+    drupal_add_js(drupal_get_path('module', 'mobile_js_redirect') . '/js/mobile_redirect.js', array('weight' => 1000));
   }
 }
 
