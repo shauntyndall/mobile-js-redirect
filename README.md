@@ -12,4 +12,4 @@ The best alternative to this is to allow javascript to do the detection and redi
 How to Use
 ==========
 
-This module comes with 
+This module comes with a simple administration page to enter the domain a mobile user should be redirected to. Once the module is enabled and this domain is set, it will begin working. Be sure to fully clear the site cache as well as Varnish/nginx etc cache after enabling.
