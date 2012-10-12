@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Implements hook_install().
+ */
+
+function mobile_js_redirect_install() {
+  variable_set('mobile_js_redirect_enable', 0);
+  variable_set('mobile_js_domain_redirect', '');
+  variable_set('mobile_js_desktop_domain', '');
+}
+
+/**
  * Implements hook_uninstall().
  */
 
