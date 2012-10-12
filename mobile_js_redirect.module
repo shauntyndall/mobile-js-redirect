@@ -8,6 +8,13 @@ function mobile_js_redirect_init() {
   if (user_is_anonymous()) {
     drupal_add_js('misc/jquery.cookie.js', 'file');
   }
+
+  $enabled = variable_get('mobile_js_redirect_enable', 1);
+
+  if ($enabled) {
+    // add data to Drupal.settings
+    drupal_add_js();
+  }
 }
 
 /**
