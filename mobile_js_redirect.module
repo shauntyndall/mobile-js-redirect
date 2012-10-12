@@ -15,10 +15,11 @@ function mobile_js_redirect_init() {
  */
 
 function mobile_js_redirect_menu() {
-  $items['admin/config/mobile_js_redirect'] = array(
+  $items['admin/config/system/mobile_js_redirect'] = array(
     'title' => 'Mobile Javascript Redirect',
     'description' => 'Manage settings for mobile redirection via Javascript.',
-    'page callback' => 'mobile_js_redirect_admin_settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mobile_js_redirect_admin_settings'),
     'access arguments' => array('administer site configuration'),
     'type' => MENU_NORMAL_ITEM,
     'file' => 'mobile_js_redirect.admin.inc',
