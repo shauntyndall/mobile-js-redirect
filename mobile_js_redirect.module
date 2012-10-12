@@ -9,3 +9,20 @@ function mobile_js_redirect_init() {
     drupal_add_js('misc/jquery.cookie.js', 'file');
   }
 }
+
+/**
+ * Implements hook_menu().
+ */
+
+function mobile_js_redirect_menu() {
+  $items['admin/config/mobile_js_redirect'] = array(
+    'title' => 'Mobile Javascript Redirect',
+    'description' => 'Manage settings for mobile redirection via Javascript.',
+    'page callback' => 'mobile_js_redirect_admin_settings',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'mobile_js_redirect.admin.inc',
+  );
+
+  return $items;
+}
