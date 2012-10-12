@@ -5,5 +5,6 @@
  */
 
 function mobile_js_redirect_uninstall() {
-  // variable_del()
+  variable_del('mobile_js_redirect_enable');
+  variable_del('mobile_js_domain_redirect');
 }
