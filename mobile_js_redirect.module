@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+
+function mobile_js_redirect_init() {
+
+}

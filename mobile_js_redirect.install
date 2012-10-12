@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+
+function mobile_js_redirect_uninstall() {
+  // variable_del()
+}
